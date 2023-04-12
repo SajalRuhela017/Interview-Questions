@@ -1,0 +1,4 @@
+dir_to_ignore/.cph
+dir_to_ignore/.vscode
+*.prob
+*.bin
