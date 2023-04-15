@@ -12,7 +12,7 @@
 // Constraints:
 // n == nums.length
 // 1 <= n <= 5 * 10^4
-// -109 <= nums[i] <= 10^9
+// -10^9 <= nums[i] <= 10^9
 
 class Solution {
 public:
@@ -27,5 +27,24 @@ public:
             }
         }
         return 0;
+    }
+};
+
+// Moore's Voting Algorithm
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) 
+    {
+        int ans, count = 0;
+        for(int i = 0; i < nums.size(); i++)
+        {
+            if(count == 0)
+                count = 1 , ans = nums[i];
+            else if(ans == nums[i])
+                count++;
+            else
+                count--;
+        }
+        return ans;
     }
 };
